@@ -1,0 +1,19 @@
+{% extends 'question/index.html' %}
+{% load staticfiles %}
+{% block title %}answers{% endblock %}
+{% block extrahead %}
+{% include 'account/head.html' %}
+{% endblock %}
+{% block content %}
+{% include 'account/nav.html' %}
+<h4>{{ques_obj.title}}</h4>
+<p><a href='{% url 'postans' id=ques_obj.id %}'>Post Answer</a></p>
+<ol>
+{% for item in answers %}
+<li>
+<p><h5>{{item.created_by}}  <a href='{% url 'edit answer' id=item.id %}'>Edit</a></h5></p>
+<p>{{item.body}}</p>
+</li>
+{% endfor %}
+</ol>
+{% endblock %}

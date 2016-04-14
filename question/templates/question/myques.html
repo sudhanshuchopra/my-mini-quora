@@ -1,0 +1,20 @@
+{% extends 'question/index.html' %}
+{% block title %}myques{% endblock %}
+{% block extrahead %}
+{% include 'account/head.html' %}
+{% endblock %}
+{% block content %}
+{% include 'account/nav.html' %}
+<div class='container'>
+<ol>
+{% for item in list %}
+<li>
+<h3>
+ <a href='{% url 'ans' id=item.id %}'>
+{{item.title}}</a></h3><a href='{% url 'edit' id=item.id %}'>Edit Ques</a>
+</li>
+{{item.body}}
+{% endfor %}
+</ol>
+</div>
+{% endblock %}

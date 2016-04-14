@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<div class='row'>
+<div class='col s12 red'>
+<div class='cardpanel'>
+<div class='row'>
+{% load staticfiles %}
+<div class='col s3 m3 l3 id="dia"'><img src='{% static 'images/logo.png' %}'></div>
+<div class='col s2 m2 l2'><a href='{% url 'add' %}'>+</a></div>
+<div class='col s2 m2 l2'><a href='{% url 'list' %}'>all Questions</a></div>
+<div class='col s2 m2 l2'><a href='{% url 'myques' %}'>My Questions</a></div>
+<div class='col s3 m3 l3'>
+<div class='row'>{{user.username}}</div>
+<div class='row'><a href='{% url 'logout' %}'>logout</a></div>
+<div class='row'><a href='{% url 'change' %}'>change password</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>

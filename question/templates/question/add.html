@@ -1,0 +1,24 @@
+{% extends 'question/index.html' %}
+{% block title %}add question{% endblock %}
+{% block extrahead %}
+{% include 'account/head.html' %}
+{% endblock %}
+{% load material_form %}
+{% block content %}
+{% include 'account/nav.html' %}
+<div class='row '>
+<div class='col s12 m8 l6 offset-m2 offset-l3 white'>
+<h4>add question</h4>
+<form action='{% url 'add' %}' method='POST'>
+{% csrf_token %}
+{% form form=f %}{% endform %}
+<div class='row'>
+<div class='col s12'>
+<button type="submit" id ="add-btn" name="add" class="btn waves-effect waves-light left">Add</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+{% endblock %}
+

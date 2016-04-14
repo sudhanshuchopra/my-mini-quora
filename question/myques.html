@@ -1,0 +1,11 @@
+{% extends 'question/index.html' %}
+{% block title %}myques{% endblock %}
+{% block content %}
+<ul>
+{% for item in list %}
+<li>
+{{item.title}}</li>
+{{item.body}}
+{% endfor %}
+</ul>
+{% endblock %}

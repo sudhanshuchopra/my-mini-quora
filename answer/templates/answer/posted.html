@@ -1,0 +1,12 @@
+{% extends 'question/index.html' %}
+{% block title %}answer posted{% endblock %}
+{% block extrahead %}
+{% include 'account/head.html' %}
+{% endblock %}
+{% block content %}
+{% include 'account/nav.html' %}
+<div class='container'>
+<p>hiii {{user.username}}</p>
+<p>Your answer has been posted succesfully</p>
+</div>
+{% endblock %}

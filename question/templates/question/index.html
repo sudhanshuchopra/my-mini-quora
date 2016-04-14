@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link href="{% static 'question/css/base.css' %}" rel="stylesheet">
+	{% include 'material/includes/material_css.html' %}
+	{% block extrahead %}{% endblock %}
+</head>
+<body>
+<main class='container'>
+{% block content %}
+{% endblock %}
+</main>
+<script src="{% static 'account/js/jquery-2.2.1.min.js' %}"></script>
+{% include 'material/includes/material_js.html' %}
+       {% block scripts %} {% endblock %}
+
+
+</body>
+</html>
